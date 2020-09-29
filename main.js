@@ -11,4 +11,5 @@ app.on("ready", () => {
         }
     });
     win.loadFile("index.html");
+    // win.setMenu(null);
 });

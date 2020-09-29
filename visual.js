@@ -5,9 +5,9 @@ var camera = new THREE.PerspectiveCamera(
 )
 const fft = 1024;
 const width = 8;
-const elements = 7;
+const elements = 31;
 const h = width/elements;
-const res = 2;
+const res = 8;
 
 // Camera:
 let height = 0.2;
@@ -19,6 +19,13 @@ renderer = new THREE.WebGLRenderer({antialias: true});
 renderer.setSize(window.innerWidth, window.innerHeight);
 renderer.setClearColor(0xffffff);
 document.getElementById("webglviewer").appendChild(renderer.domElement);
+
+window.addEventListener('resize', () => {
+    camera.aspect = window.innerWidth / window.innerHeight;
+    camera.updateProjectionMatrix();
+    renderer.setSize(window.innerWidth, window.innerHeight)
+})
+
 
 // Models:
 let geo = [];
@@ -41,7 +48,7 @@ scene.add(light);
 let origSpeed = 0.1;
 let speed = origSpeed;
 let v = 60/speed;
-move = false;
+isPlaying = false;
 
 let i = 1;
 let a = 0
@@ -77,7 +84,7 @@ var render = () => {
     light.position.z = 5;
     light.power = newLight();
     
-    if (move) {
+    if (isPlaying) {
         value = Math.tanh(0.01*a);
         camera.position.z = 2.8*value+0.2;
         rgb = new THREE.Color( 1-value, 1-value, 1-value );

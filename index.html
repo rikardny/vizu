@@ -19,11 +19,21 @@
             top: 0;
             bottom: 0;
         }
+        .file-field {
+            margin-top: -10,
+        }
     </style>
 </head>
 <body>
+    <div class="file-field">
+      <div class="waves-effect btn-flat">
+        <span>File</span>
+        <input type="file" id="file">
+      </div>
+      <a id="play" class="waves-effect btn-flat">Play</a>
+      <a id="pause" class="waves-effect btn-flat">Pause</a>
+    </div>
     <div id="webglviewer" class="fullscreen"></div>
-    <a id="button" class="waves-effect waves-light btn">button</a>
     <script src="visual.js"></script>
     <script src="audio.js"></script>
 </body>
