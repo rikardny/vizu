@@ -1,6 +1,7 @@
 const fileButton = document.getElementById("file");
 const playButton = document.getElementById("play");
 const pauseButton = document.getElementById("pause");
+const sampleButton = document.getElementById("sample");
 
 // create an AudioListener and add it to the camera
 const listener = new THREE.AudioListener();
@@ -51,4 +52,12 @@ playButton.addEventListener("click", event => {
 
 pauseButton.addEventListener("click", event => {
     sound.pause();
+})
+
+sampleButton.addEventListener("click", e => {
+    e.preventDefault();
+    if (sound.isPlaying) {
+        sound.stop();
+    }
+    play("./songs/Electric\ Swing\ Circus\ -\ Bella\ Belle\ \(Keizan\ remix\).mp3");
 })
