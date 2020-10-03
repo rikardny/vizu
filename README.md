@@ -5,13 +5,14 @@ A music visualizer built with the JavaScript 3D library [three.js](https://three
 ## Installation
 - Requirements are: `node`, `npm`:
 
-`sudo apt i node npm`
+`sudo apt install node npm`
 - Clone this repository to a new directory:
 
 `git clone https://github.com/rikardny/vizu.git`
 - Move into the new directory and install deps:
 
 `cd vizu/`
+
 `npm i`
 - Start local electron application with:
 
