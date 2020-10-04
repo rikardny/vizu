@@ -8,7 +8,6 @@ const listener = new THREE.AudioListener();
 camera.add(listener)
 
 // create a global audio source
-const audio = document.getElementById("audio");
 const sound = new THREE.Audio( listener );
 
 // load a sound and set it as the Audio object's buffer

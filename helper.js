@@ -36,7 +36,8 @@ const getData = () => {
         reduced[index] += data[i];
     }
     reduced = reduced.concat(reduced.slice().reverse());   
-    reduced = reduced.map(x => Math.pow(0.01*elements/fft*x,2))
+    // reduced = reduced.map(x => Math.pow(0.01*elements/fft*x,2))
+    reduced = reduced.map(x => 0.01*elements/fft*x);
     return reduced;
 }
 const newSpeed = (speed) => {

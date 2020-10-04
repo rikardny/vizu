@@ -3,13 +3,14 @@ var scene = new THREE.Scene();
 var camera = new THREE.PerspectiveCamera(
     90, window.innerWidth/window.innerHeight, 0.1, 10 
 )
+// Progam constants
 const fft = 1024;
 const width = 8;
 const elements = 31;
 const h = width/elements;
 const res = 8;
 
-// Camera:
+// Camera
 let height = 0.2;
 camera.position.set(0, 0, height);
 camera.rotateX(0.4*Math.PI);
@@ -27,16 +28,16 @@ window.addEventListener('resize', () => {
 })
 
 
-// Models:
+// Models
+let points = [];
 let geo = [];
+let models = [];
 let mat = new THREE.MeshPhongMaterial( {
     color: 0xffffff, 
     wireframe: true,
     vertexColors: THREE.VertexColors,
 });
 
-let points = [];
-let models = [];
 addLine(0);
 
 // Lighting
@@ -45,6 +46,7 @@ let ambient = new THREE.AmbientLight( 0xffffff, 0.00 );
 scene.add(ambient);
 scene.add(light);
 
+// Movement parameters
 let origSpeed = 0.1;
 let speed = origSpeed;
 let v = 60/speed;
