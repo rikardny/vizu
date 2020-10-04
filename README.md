@@ -1,6 +1,6 @@
 # VIZU - Advanced Computer Graphics Lab 3
 
-A music visualizer built with the JavaScript 3D library [three.js](https://threejs.org/) on top of [Electron](https://www.electronjs.org/). A version of this application (without .mp3-functionality) is hosted online at [rikardny.github.io](rikardny.github.io). It is hosted from a separate repository from this one, along with code changes specific to the online version.
+A music visualizer built with the JavaScript 3D library [three.js](https://threejs.org/) on top of [Electron](https://www.electronjs.org/). A version of this application (without .mp3-functionality) is hosted online at [rikardny.github.io](https://rikardny.github.io). It is hosted from a separate repository from this one, along with code changes specific to the online version.
 
 ## Installation
 - Requirements are: `node`, `npm`:
